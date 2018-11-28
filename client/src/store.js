@@ -14,7 +14,7 @@ const store = createStore(rootReducer, initialState, compose(
 }
 else {
     var store = createStore(
-        reducer,
+        rootReducer,
         initialState
     ,
     compose(
