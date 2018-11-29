@@ -1,1 +1,1 @@
-# mern-shoppinglist
+# mern-adventurelog

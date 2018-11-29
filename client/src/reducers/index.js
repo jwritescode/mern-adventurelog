@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import itemReducer from './itemReducer';
+import logReducer from './logReducer';
 
 export default combineReducers({
-    item: itemReducer 
+    log: logReducer 
 });
