@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_LOGS, ADD_LOG, DELETE_LOG, LOGS_LOADING } from './types';
+import { GET_LOGS, ADD_LOG, EDIT_LOG, DELETE_LOG, LOGS_LOADING } from './types';
 
 
 export const getLogs = () =>  dispatch => {
@@ -22,6 +22,16 @@ export const addLog = (log) => dispatch => {
             payload: res.data
         })
     )
+};
+
+export const editLog = (id) => dispatch => {
+    axios
+    .put(`/api/logs/${id}`).then(res => 
+    dispatch({
+        type: EDIT_LOG,
+        payload: res.data
+    })
+)
 };
 
 export const deleteLog = (id) => dispatch => {
